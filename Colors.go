@@ -2,7 +2,7 @@ package colors
 
 var prefix = "\033["
 
-const (
+var (
 	BLACK = prefix + "0;30m"
 	RED = prefix + "0;31m"
 	GREEN = prefix + "0;32m"
@@ -20,6 +20,6 @@ const (
 	LIGHT_CYAN = prefix + "1;36m"
 	WHITE = prefix + "1;37m"
 
-	NC = prefix + "0m"
-	NO_COLOR = NC
+	NONE = prefix + "0m"
+	NO_COLOR = NONE
 )
