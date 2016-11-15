@@ -2,11 +2,11 @@ package colors
 
 import "fmt"
 
-type weight uint8
+type style uint8
 
 const (
 	// None means neither bold nor underline
-	None = weight(iota)
+	None = style(iota)
 
 	// Bold text
 	Bold
@@ -46,12 +46,12 @@ func concat(a ...interface{}) string {
 }
 
 // Black returns an ASCII Black string made of all interfaces{} passed
-func Black(w weight, a ...interface{}) string {
+func Black(w style, a ...interface{}) string {
 	return black + concat(a...) + none
 }
 
 // Red returns an ASCII re string made of all interfaces{} passed
-func Red(w weight, a ...interface{}) string {
+func Red(w style, a ...interface{}) string {
 	c := red
 	if w == Bold {
 		c = boldRed
@@ -60,7 +60,7 @@ func Red(w weight, a ...interface{}) string {
 }
 
 // Green returns an ASCII re string made of all interfaces{} passed
-func Green(w weight, a ...interface{}) string {
+func Green(w style, a ...interface{}) string {
 	c := green
 	if w == Bold {
 		c = boldGreen
@@ -69,7 +69,7 @@ func Green(w weight, a ...interface{}) string {
 }
 
 // Yellow returns an ASCII re string made of all interfaces{} passed
-func Yellow(w weight, a ...interface{}) string {
+func Yellow(w style, a ...interface{}) string {
 	c := yellow
 	if w == Bold {
 		c = boldYellow
@@ -78,7 +78,7 @@ func Yellow(w weight, a ...interface{}) string {
 }
 
 // Blue returns an ASCII re string made of all interfaces{} passed
-func Blue(w weight, a ...interface{}) string {
+func Blue(w style, a ...interface{}) string {
 	c := blue
 	if w == Bold {
 		c = boldBlue
@@ -87,7 +87,7 @@ func Blue(w weight, a ...interface{}) string {
 }
 
 // Purple returns an ASCII re string made of all interfaces{} passed
-func Purple(w weight, a ...interface{}) string {
+func Purple(w style, a ...interface{}) string {
 	c := purple
 	if w == Bold {
 		c = boldPurple
@@ -96,7 +96,7 @@ func Purple(w weight, a ...interface{}) string {
 }
 
 // Cyan returns an ASCII re string made of all interfaces{} passed
-func Cyan(w weight, a ...interface{}) string {
+func Cyan(w style, a ...interface{}) string {
 	c := cyan
 	if w == Bold {
 		c = boldCyan
