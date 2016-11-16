@@ -40,7 +40,7 @@ var (
 func concat(a ...interface{}) string {
 	str := ""
 	for _, x := range a {
-		str += fmt.Sprintf("%s", x)
+		str += fmt.Sprint(x)
 	}
 	return str
 }
